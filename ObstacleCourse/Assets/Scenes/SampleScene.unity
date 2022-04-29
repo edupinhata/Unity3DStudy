@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 657325956}
   - component: {fileID: 657325955}
   - component: {fileID: 657325954}
+  - component: {fileID: 657325957}
   m_Layer: 0
   m_Name: Wall2 (2)
   m_TagString: Untagged
@@ -220,6 +221,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 657325952}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &657325957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657325952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ea63a388f1d79949a0c1ae66d983b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &668166522
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,6 +245,7 @@ GameObject:
   - component: {fileID: 668166526}
   - component: {fileID: 668166525}
   - component: {fileID: 668166524}
+  - component: {fileID: 668166527}
   m_Layer: 0
   m_Name: Wall2
   m_TagString: Untagged
@@ -317,6 +331,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668166522}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &668166527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668166522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ea63a388f1d79949a0c1ae66d983b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &692987784
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +355,7 @@ GameObject:
   - component: {fileID: 692987788}
   - component: {fileID: 692987787}
   - component: {fileID: 692987786}
+  - component: {fileID: 692987789}
   m_Layer: 0
   m_Name: Wall1
   m_TagString: Untagged
@@ -414,6 +441,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692987784}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &692987789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692987784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ea63a388f1d79949a0c1ae66d983b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,7 +845,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.5707657, y: 1}
+    m_SensorSize: {x: 2.2482598, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -843,6 +882,7 @@ GameObject:
   - component: {fileID: 1660308973}
   - component: {fileID: 1660308972}
   - component: {fileID: 1660308971}
+  - component: {fileID: 1660308974}
   m_Layer: 0
   m_Name: Wall2 (1)
   m_TagString: Untagged
@@ -928,6 +968,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660308969}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1660308974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660308969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ea63a388f1d79949a0c1ae66d983b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1833758077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,7 +1280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71e87d002496a4e04a962c2361098e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementRate: 15
+  movementRate: 20
 --- !u!4 &1694025780924870608 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4811027890939799014, guid: 88a04917651e448909c5eee3c968b511, type: 3}
@@ -1248,7 +1300,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!65 &1694025780924870610
 BoxCollider:
