@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Mover : MonoBehaviour
@@ -9,7 +7,7 @@ public class Mover : MonoBehaviour
 
     private float xValue;
     private float zValue;
-    
+
     
     // Start is called before the first frame update
     void Start()
@@ -32,8 +30,11 @@ public class Mover : MonoBehaviour
 
     void MovePlayer()
     {
-        xValue = Input.GetAxis("Horizontal") * movementRate * Time.deltaTime;
-        zValue = Input.GetAxis("Vertical") * movementRate * Time.deltaTime;
+        var verticalInput = Input.GetAxis("Vertical");
+        var horizontalInput = Input.GetAxis("Horizontal");
+        
+        xValue = horizontalInput * movementRate * Time.deltaTime;
+        zValue = verticalInput * movementRate * Time.deltaTime;
         transform.Translate(xValue, 0, zValue);
     }
 }
