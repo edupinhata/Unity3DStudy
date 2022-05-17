@@ -4,10 +4,11 @@ Code made in the projects of the Unity 3D course from GameDev.Tv
 ## Obstacle Course
 
 This first project will teach basics of 3D game like:
-- Creating 3D objects
-- Moving 3D ojects
-- Cinemachine Camera
-- 3D collision
+- **Creating 3D objects**
+- **Moving 3D ojects:** learned using translate, although it's imprecise, so force would be more accurate.
+- **Cinemachine Camera**
+- **3D collision**
+- **tag system:** to apply specific logic to objects, for example, give a tag of player to a game object, and make and specific interaction of other objects and this player
 
 ## Addressables
 
