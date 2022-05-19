@@ -1,8 +1,11 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Movement : MonoBehaviour
 {
-    private Rigidbody rb; 
+    private Rigidbody rb;
+    [FormerlySerializedAs("power")] [SerializeField] private float mainThrust;
+    [FormerlySerializedAs("rotationPower")] [SerializeField] private float rotationThrust;
     
     // Start is called before the first frame update
     void Start()
@@ -21,13 +24,22 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(0, 0, 10*Time.deltaTime);
+            ApplyRotation(rotationThrust);
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(0, 0, -10*Time.deltaTime);
+            ApplyRotation(-rotationThrust);
         }
+        else
+        {
+            rb.freezeRotation = false;
+        }
+    }
 
+    private void ApplyRotation(float rotationThisFrame)
+    {
+        rb.freezeRotation = true; 
+        transform.Rotate(Vector3.forward * rotationThisFrame * Time.deltaTime);
     }
 
     private void ProcessThrust()
@@ -35,7 +47,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             Debug.Log("Trust!!!");
-            rb.AddRelativeForce(Vector3.up);
+            rb.AddRelativeForce(Vector3.up * (Time.deltaTime * mainThrust));
         }
     }
 }
