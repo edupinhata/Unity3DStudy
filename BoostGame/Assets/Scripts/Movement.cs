@@ -4,6 +4,7 @@ using UnityEngine.Serialization;
 public class Movement : MonoBehaviour
 {
     private Rigidbody rb;
+    private AudioSource audioSource;
     [FormerlySerializedAs("power")] [SerializeField] private float mainThrust;
     [FormerlySerializedAs("rotationPower")] [SerializeField] private float rotationThrust;
     
@@ -11,6 +12,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -46,8 +48,18 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            Debug.Log("Trust!!!");
             rb.AddRelativeForce(Vector3.up * (Time.deltaTime * mainThrust));
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+        }
+        else
+        {
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
         }
     }
 }
